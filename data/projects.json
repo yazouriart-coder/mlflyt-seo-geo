@@ -1,0 +1,32 @@
+{
+  "last_updated": "2026-02-02T23:15:00",
+  "projects": {
+    "mlflyt": {
+      "name": "MLflyt",
+      "icon": "🚛",
+      "status": "aktiv",
+      "geo_sider": {"faerdige": 2, "total": 100, "procent": 2},
+      "seo_ranking": {"flyttefirma_aarhus": 8, "flyttefirma_skanderborg": 5, "flyttefirma_randers": 7},
+      "nye_leads": 3
+    },
+    "sacred": {
+      "name": "Sacred Pet CBD",
+      "icon": "🌿",
+      "status": "klar_til_deploy",
+      "landing_page": "100%",
+      "mangler": ["Analytics ID", "Domæne"]
+    },
+    "trading": {
+      "name": "Trading Bot",
+      "icon": "📈",
+      "mode": "READ_ONLY",
+      "kapital": 297.95,
+      "exchange": "bybit",
+      "paper_trading": false,
+      "positioner": [
+        {"symbol": "BTCUSDT", "direction": "SHORT", "entry": 79559.40},
+        {"symbol": "ETHUSDT", "direction": "SHORT", "entry": 2397.11}
+      ]
+    }
+  }
+}

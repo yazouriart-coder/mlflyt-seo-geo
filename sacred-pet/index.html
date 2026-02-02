@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <!-- GRATIS: Meta tags til SEO -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sacred Pet CBD — Danmarks #1 CBD olie til hunde. Naturlig lindring af angst, smerter & søvnproblemer. 2.847+ tilfredse kunder. 30 dages pengene-tilbage-garanti. Gratis fragt over 299 kr.">
+  <meta name="keywords" content="CBD hund, CBD olie hund, hund angst, hund smerter, naturlig hundemedicin, dansk CBD">
+  <meta name="author" content="Sacred Pet">
+  
+  <!-- GRATIS: Open Graph (social sharing) -->
+  <meta property="og:title" content="Sacred Pet CBD — Din Hunds Naturlige Lindring">
+  <meta property="og:description" content="Naturlig CBD olie der lindrer angst, smerter og søvnproblemer hos hunde. 30 dages garanti.">
+  <meta property="og:image" content="https://sacredpet.dk/og-image.jpg">
+  <meta property="og:url" content="https://sacredpet.dk">
+  <meta property="og:type" content="product">
+  
+  <!-- GRATIS: Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sacred Pet CBD — Din Hunds Naturlige Lindring">
+  <meta name="twitter:description" content="Naturlig CBD olie til hunde. 30 dages garanti.">
+  
+  <!-- GRATIS: Canonical URL -->
+  <link rel="canonical" href="https://sacredpet.dk/">
+  
+  <title>Sacred Pet CBD — Danmarks Bedste CBD til Hunde | 30 Dages Garanti 🌿</title>
+  
+  <!-- GRATIS: Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- GRATIS: Google Fonts (Inter) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- GRATIS: Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    
+    /* Scroll Progress Bar */
+    #progress-bar { position: fixed; top: 0; left: 0; height: 4px; background: linear-gradient(90deg, #10b981, #f59e0b, #8b5cf6); z-index: 9999; transition: width 0.1s; width: 0%; }
+    
+    /* Animations */
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+    @keyframes pulse-ring { 0% { transform: scale(0.8); opacity: 1; } 100% { transform: scale(2); opacity: 0; } }
+    @keyframes shimmer { 0% { background-position: -1000px 0; } 100% { background-position: 1000px 0; } }
+    @keyframes countUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes slideIn { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+    
+    .animate-fade-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; }
+    .animate-float { animation: float 4s ease-in-out infinite; }
+    .animate-pulse-ring::before { content: ''; position: absolute; inset: 0; border-radius: 50%; background: inherit; animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; }
+    .animate-shimmer { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent); background-size: 1000px 100%; animation: shimmer 2s infinite; }
+    
+    /* Delays */
+    .delay-100 { animation-delay: 0.1s; }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-300 { animation-delay: 0.3s; }
+    .delay-400 { animation-delay: 0.4s; }
+    .delay-500 { animation-delay: 0.5s; }
+    
+    /* Gradient text */
+    .gradient-text { background: linear-gradient(135deg, #059669 0%, #10b981 50%, #34d399 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    
+    /* Glassmorphism */
+    .glass { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.3); }
+    .glass-dark { background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); }
+    
+    /* Scroll reveal */
+    .scroll-reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+    .scroll-reveal.visible { opacity: 1; transform: translateY(0); }
+    
+    /* Mobile sticky CTA */
+    @media (max-width: 768px) { .sticky-cta { position: fixed; bottom: 0; left: 0; right: 0; background: white; border-top: 1px solid #e5e7eb; padding: 1rem; z-index: 50; box-shadow: 0 -4px 20px rgba(0,0,0,0.1); } .sticky-cta + * { padding-bottom: 80px; } }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: #f1f1f1; }
+    ::-webkit-scrollbar-thumb { background: #10b981; border-radius: 5px; }
+    ::-webkit-scrollbar-thumb:hover { background: #059669; }
+    
+    /* Micro-interactions */
+    .btn-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .btn-hover:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 20px 40px -10px rgba(16, 185, 129, 0.4); }
+    .btn-hover:active { transform: translateY(-1px) scale(0.98); }
+    
+    /* Card hover effects */
+    .card-hover { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 30px 60px -15px rgba(0,0,0,0.2); }
+    
+    /* Link underline animation */
+    .link-underline { position: relative; }
+    .link-underline::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #10b981; transition: width 0.3s; }
+    .link-underline:hover::after { width: 100%; }
+  </style>
+  
+  <!-- ============================================ -->
+  <!-- GRATIS ANALYTICS: Plausible (Privacy-friendly) -->
+  <!-- ============================================ -->
+  <script defer data-domain="sacredpet.dk" src="https://plausible.io/js/script.js"></script>
+  
+  <!-- ============================================ -->
+  <!-- GRATIS: Microsoft Clarity (Heatmaps + Recordings) -->
+  <!-- ============================================ -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "YOUR_CLARITY_ID");
+  </script>
+  
+  <!-- ============================================ -->
+  <!-- GRATIS: Schema.org Structured Data (SEO) -->
+  <!-- ============================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Sacred Pet CBD Olie",
+    "image": "https://sacredpet.dk/product-image.jpg",
+    "description": "Naturlig CBD olie til hunde. Lindrer angst, smerter og søvnproblemer.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Sacred Pet"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://sacredpet.dk",
+      "price": "399.00",
+      "priceCurrency": "DKK",
+      "availability": "https://schema.org/InStock",
+      "priceValidUntil": "2026-12-31"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "2847"
+    }
+  }
+  </script>
+  
+  <!-- GRATIS: Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Sacred Pet",
+    "url": "https://sacredpet.dk",
+    "logo": "https://sacredpet.dk/logo.png",
+    "sameAs": [
+      "https://facebook.com/sacredpet",
+      "https://instagram.com/sacredpet"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+45-12-34-56-78",
+      "contactType": "customer service",
+      "email": "kontakt@sacredpet.dk"
+    }
+  }
+  </script>
+  
+  <!-- GRATIS: LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Sacred Pet",
+    "image": "https://sacredpet.dk/store.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Eksempelgade 123",
+      "addressLocality": "Aarhus",
+      "postalCode": "8000",
+      "addressCountry": "DK"
+    }
+  }
+  </script>
+
+</head>
+
+<body class="bg-white text-gray-900 overflow-x-hidden">
+
+  <!-- ============================================ -->
+  <!-- PROGRESS BAR (Scroll Indicator) -->
+  <!-- ============================================ -->
+  <div id="progress-bar"></div>
+
+  <!-- ============================================ -->
+  <!-- ANNOUNCEMENT BAR (Urgency + Social Proof) -->
+  <!-- ============================================ -->
+  <div class="bg-gradient-to-r from-amber-400 via-amber-500 to-orange-500 text-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 py-2">
+      <div class="flex items-center justify-center gap-4 text-sm font-medium animate-pulse">
+        <div class="flex items-center gap-2">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+          </span>
+          <span id="live-counter">47</span> kigger lige nu
+        </div>
+        
+        <span class="hidden sm:inline">| 🔥 <span id="sold-today">127</span> solgt i dag</span>
+        
+        <span class="hidden md:inline">| ⏰ Tilbud slutter: <span id="countdown">04:32:18</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- NAVIGATION (Sticky + Glassmorphism) -->
+  <!-- ============================================ -->
+  <nav class="fixed w-full z-50 transition-all duration-500" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div class="glass rounded-2xl px-6 py-4 flex justify-between items-center shadow-xl">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center text-white text-2xl shadow-lg group-hover:scale-110 transition-transform">🌿</div>
+          <div>
+            <span class="text-2xl font-black bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">Sacred Pet</span>
+            <span class="hidden sm:block text-xs text-gray-500">CBD til hunde</span>
+          </div>
+        </a>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#problem" class="link-underline text-gray-600 hover:text-emerald-600 font-medium transition">Problemet</a>
+          <a href="#losning" class="link-underline text-gray-600 hover:text-emerald-600 font-medium transition">Løsningen</a>
+          <a href="#bevis" class="link-underline text-gray-600 hover:text-emerald-600 font-medium transition">Anmeldelser</a>
+          <a href="#faq" class="link-underline text-gray-600 hover:text-emerald-600 font-medium transition">FAQ</a>
+          <a href="#kontakt" class="link-underline text-gray-600 hover:text-emerald-600 font-medium transition">Kontakt</a>
+        </div>
+        
+        <!-- CTA Button -->
+        <div class="flex items-center gap-4">
+          <div class="hidden md:block text-right">
+            <div class="text-xs text-gray-500">Gratis fragt over 299 kr</div>
+            <div class="text-xs text-emerald-600 font-semibold">Levering 1-2 dage</div>
+          </div>
+          
+          <a href="#tilbud" class="btn-hover bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-xl font-bold shadow-lg flex items-center gap-2">
+            <span>Bestil nu</span>
+            <span class="bg-white/20 px-2 py-0.5 rounded text-sm">-10%</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================ -->
+  <!-- HERO SECTION (100% Height + Video Background Placeholder) -->
+  <!-- ============================================ -->
+  <section class="relative min-h-screen flex items-center justify-center pt-32 pb-20 overflow-hidden">
+    <!-- Animated Background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-emerald-50 via-white to-teal-50"></div>
+    
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-20 -right-20 w-[500px] h-[500px] bg-emerald-200 rounded-full filter blur-[100px] opacity-40 animate-float"></div>
+      
+      <div class="absolute bottom-20 -left-20 w-[600px] h-[600px] bg-amber-200 rounded-full filter blur-[100px] opacity-40 animate-float" style="animation-delay: 2s;"></div>
+      
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-200 rounded-full filter blur-[120px] opacity-30 animate-float" style="animation-delay: 4s;"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <!-- Content -->
+        <div class="space-y-6 text-center lg:text-left">
+          <!-- Trust Badges (Above Fold) -->
+          <div class="flex flex-wrap justify-center lg:justify-start gap-2 animate-fade-up">
+            <span class="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-700 px-3 py-1.5 rounded-full text-sm font-semibold">
+              <span>🇩🇰</span> Danskproduceret
+            </span>
+            
+            <span class="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-700 px-3 py-1.5 rounded-full text-sm font-semibold">
+              <span>🧪</span> Laboratorietestet
+            </span>
+            
+            <span class="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-700 px-3 py-1.5 rounded-full text-sm font-semibold">
+              <span>🛡️</span> 30 dages garanti
+            </span>
+          </div>
+
+          <!-- Headline (Under 10 words, Benefit-driven) -->
+          <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.1] animate-fade-up delay-100">
+            Giv din hund
+            <span class="gradient-text block mt-2">roen tilbage</span>
+          </h1>
+
+          <!-- Subheadline (Clear Value Prop) -->
+          <p class="text-xl text-gray-600 max-w-xl mx-auto lg:mx-0 leading-relaxed animate-fade-up delay-200">
+            Naturlig CBD olie der <strong class="text-emerald-600">lindrer angst, smerter og søvnproblemer</strong> hos hunde — uden bivirkninger. 2.847+ tilfredse kunder.
+          </p>
+
+          <!-- Social Proof (Immediate) -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 animate-fade-up delay-300">
+            <div class="flex -space-x-3">
+              <img src="https://i.pravatar.cc/100?img=1" class="w-12 h-12 rounded-full border-3 border-white shadow-md" alt="Kunde" loading="lazy">
+              <img src="https://i.pravatar.cc/100?img=2" class="w-12 h-12 rounded-full border-3 border-white shadow-md" alt="Kunde" loading="lazy">
+              <img src="https://i.pravatar.cc/100?img=3" class="w-12 h-12 rounded-full border-3 border-white shadow-md" alt="Kunde" loading="lazy">
+              <img src="https://i.pravatar.cc/100?img=4" class="w-12 h-12 rounded-full border-3 border-white shadow-md" alt="Kunde" loading="lazy">
+              <div class="w-12 h-12 rounded-full border-3 border-white bg-emerald-100 flex items-center justify-center text-emerald-700 text-sm font-bold shadow-md">+2k</div>
+            </div>
+            
+            <div class="text-center sm:text-left">
+              <div class="flex items-center justify-center sm:justify-start gap-1 text-yellow-400 text-lg">
+                ⭐⭐⭐⭐⭐
+              </div>
+              <div class="text-sm text-gray-600"><strong class="text-gray-900">4.9/5</strong> fra 2.847 anmeldelser</div>
+            </div>
+          </div>
+
+          <!-- CTA (Single Goal, Action + Benefit) -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up delay-400">
+            <a href="#tilbud" class="btn-hover bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-xl flex items-center justify-center gap-2">
+              <span>🛒 Ja, jeg vil give min hund ro</span>
+              <span class="text-sm opacity-90">— Prøv risikofrit</span>
+            </a>
+          </div>
+          
+          <!-- Micro-copy (Trust) -->
+          <p class="text-sm text-gray-500 animate-fade-up delay-500">
+            ✓ 30 dages pengene-tilbage-garanti · ✓ Gratis fragt over 299 kr · ✓ Levering 1-2 hverdage
+          </p>
+        </div>
+
+        <!-- Product Image with Floating Elements -->
+        <div class="relative animate-fade-up delay-200">
+          <div class="relative bg-gradient-to-br from-emerald-100 via-teal-100 to-emerald-200 rounded-[2.5rem] p-8 lg:p-12 shadow-2xl">
+            <!-- Product Image -->
+            <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80" 
+                 alt="Sacred Pet CBD Olie flaske med dråbetæller" 
+                 class="w-full rounded-2xl shadow-xl"
+                 loading="eager"
+                 width="600"
+                 height="600">
+            
+            <!-- Floating Card: Recent Purchase -->
+            <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl animate-float hidden sm:block">
+              <div class="flex items-center gap-3">
+                <img src="https://i.pravatar.cc/100?img=12" class="w-12 h-12 rounded-full" alt="" loading="lazy">
+                <div>
+                  <div class="font-bold text-sm">Lone M. lige købt</div>
+                  <div class="text-xs text-gray-500">for 2 minutter siden · Aarhus</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Badge: Discount -->
+            <div class="absolute -top-4 -right-4 bg-gradient-to-r from-amber-400 to-orange-500 text-white px-5 py-2 rounded-full font-bold shadow-lg animate-pulse">
+              SPAR 10%
+            </div>
+
+            <!-- Floating Badge: Free Shipping -->
+            <div class="absolute top-1/2 -right-4 bg-emerald-600 text-white px-4 py-2 rounded-full font-semibold shadow-lg hidden lg:block">
+              🚚 Gratis fragt
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- PROBLEM SECTION (Pain Point Agitation) -->
+  <!-- ============================================ -->
+  <!-- PROBLEM SECTION - Full Width -->
+  <section id="problem" class="relative py-24 lg:py-32 bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-hidden">
+    <!-- Decorative background elements -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute -top-40 -right-40 w-80 h-80 bg-red-100 rounded-full filter blur-3xl opacity-50"></div>
+      <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-orange-100 rounded-full filter blur-3xl opacity-50"></div>
+    </div>
+    
+    <div class="relative max-w-full mx-auto px-4 sm:px-8 lg:px-16 xl:px-24">
+      <div class="text-center mb-16 scroll-reveal">
+        <span class="inline-block bg-red-100 text-red-600 px-6 py-2 rounded-full text-sm font-bold mb-4">💔 Kender du det?</span>
+        
+        <h2 class="text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 mb-6 max-w-5xl mx-auto">Det er hjerteskærende at se sin hund lide</h2>
+        
+        <p class="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto">Millioner af hunde lider — men traditionelle midler har bivirkninger eller virker ikke. Du føler dig magtesløs.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
+        <!-- Problem 1 -->
+        <div class="bg-white p-8 rounded-3xl shadow-lg border-t-4 border-red-400 card-hover scroll-reveal">
+          <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center text-4xl mb-6">😰</div>
+          
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Angst ødelægger livet</h3>
+          
+          <p class="text-gray-600 mb-4">Din hund ryster, gemmer sig, eller ødelægger ting når de er alene. Du kan ikke hjælpe dem.</p>
+          
+          <div class="text-red-600 font-semibold text-sm">📊 40% af alle hunde har angst</div>
+        </div>
+
+        <!-- Problem 2 -->
+        <div class="bg-white p-8 rounded-3xl shadow-lg border-t-4 border-orange-400 card-hover scroll-reveal">
+          <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center text-4xl mb-6">🦴</div>
+          
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Smerter begrænser glæden</h3>
+          
+          <p class="text-gray-600 mb-4">Din ældre hund kan ikke hoppe op i sofaen. Gåturene bliver kortere. De har ondt i stilhed.</p>
+          
+          <div class="text-orange-600 font-semibold text-sm">📊 62% af hunde over 7 år har ledproblemer</div>
+        </div>
+
+        <!-- Problem 3 -->
+        <div class="bg-white p-8 rounded-3xl shadow-lg border-t-4 border-yellow-400 card-hover scroll-reveal">
+          <div class="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center text-4xl mb-6">😴</div>
+          
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Dårlig søvn = dårligt helbred</h3>
+          
+          <p class="text-gray-600 mb-4">Din hund vågner ofte, går rundt om natten. De vågner trætte — og du sover heller ikke ordentligt.</p>
+          
+          <div class="text-yellow-700 font-semibold text-sm">📊 Søvnproblemer svækker immunforsvaret</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION SECTION - Full Width -->
+  <section id="losning" class="relative py-24 lg:py-32 bg-white overflow-hidden">
+    
+    <!-- Decorative elements -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-20 -left-40 w-96 h-96 bg-emerald-100 rounded-full filter blur-3xl opacity-60"></div>
+      <div class="absolute bottom-20 -right-40 w-96 h-96 bg-teal-100 rounded-full filter blur-3xl opacity-60"></div>
+    </div>
+    
+    <div class="relative max-w-full mx-auto px-4 sm:px-8 lg:px-16 xl:px-24">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-7xl mx-auto">
+        <!-- Content -->
+        <div class="space-y-8 scroll-reveal">
+          <span class="inline-block bg-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-semibold">✨ Løsningen</span>
+          
+          <h2 class="text-4xl lg:text-6xl font-black text-gray-900">
+            Naturlig lindring
+            <span class="gradient-text block">uden bivirkninger</span>
+          </h2>
+
+          <p class="text-xl text-gray-600 leading-relaxed">
+            Sacred Pet CBD virker med kroppens naturlige systemer. Det er ikke kemikalier — det er en plante, der har hjulpet i tusindvis af år.
+          </p>
+
+          <div class="space-y-6">
+            <div class="flex gap-4 items-start">
+              <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 font-bold flex-shrink-0">✓</div>
+              <div>
+                <div class="font-bold text-lg">Virker inden for 2 uger</div>
+                <div class="text-gray-600">De fleste hunde viser markant forbedring hurtigt</div>
+              </div>
+            </div>
+
+            <div class="flex gap-4 items-start">
+              <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 font-bold flex-shrink-0">✓</div>
+              <div>
+                <div class="font-bold text-lg">Ingen døsighed</div>
+                <div class="text-gray-600">Din hund bliver rolig, ikke sløv — stadig fuld af energi</div>
+              </div>
+            </div>
+
+            <div class="flex gap-4 items-start">
+              <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 font-bold flex-shrink-0">✓</div>
+              <div>
+                <div class="font-bold text-lg">Nem at give</div>
+                <div class="text-gray-600">Kyllingsmag — din hund elsker det. Put på mad eller direkte i munden</div>
+              </div>
+            </div>
+          </div>
+
+          <a href="#tilbud" class="inline-block btn-hover bg-emerald-600 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-lg">
+            Se om det virker for din hund →
+          </a>
+        </div>
+
+        <!-- Before/After Comparison -->
+        <div class="scroll-reveal">
+          <div class="bg-white p-8 rounded-3xl shadow-xl">
+            <h3 class="text-center font-bold text-2xl mb-8">Før vs. Efter Sacred Pet</h3>
+            
+            <div class="space-y-4">
+              <!-- Before -->
+              <div class="flex items-center justify-between p-4 bg-red-50 rounded-xl border-2 border-red-100">
+                <div class="flex items-center gap-3">
+                  <span class="text-2xl">😰</span>
+                  <span class="font-medium">Før: Ryster ved fyrværkeri</span>
+                </div>
+                <span class="text-red-500 font-bold text-xl">❌</span>
+              </div>
+
+              <!-- Arrow -->
+              <div class="flex justify-center">
+                <span class="text-3xl text-emerald-500">↓</span>
+              </div>
+
+              <!-- After -->
+              <div class="flex items-center justify-between p-4 bg-emerald-50 rounded-xl border-2 border-emerald-200">
+                <div class="flex items-center gap-3">
+                  <span class="text-2xl">😌</span>
+                  <span class="font-medium">Efter: Ligger roligt og sover</span>
+                </div>
+                <span class="text-emerald-500 font-bold text-xl">✓</span>
+              </div>
+
+              <!-- Before 2 -->
+              <div class="flex items-center justify-between p-4 bg-red-50 rounded-xl border-2 border-red-100">
+                <div class="flex items-center gap-3">
+                  <span class="text-2xl">🦴</span>
+                  <span class="font-medium">Før: Har svært ved at gå</span>
+                </div>
+                <span class="text-red-500 font-bold text-xl">❌</span>
+              </div>
+
+              <!-- Arrow -->
+              <div class="flex justify-center">
+                <span class="text-3xl text-emerald-500">↓</span>
+              </div>
+
+              <!-- After 2 -->
+              <div class="flex items-center justify-between p-4 bg-emerald-50 rounded-xl border-2 border-emerald-200">
+                <div class="flex items-center gap-3">
+                  <span class="text-2xl">🏃</span>
+                  <span class="font-medium">Efter: Hopper og leger igen</span>
+                </div>
+                <span class="text-emerald-500 font-bold text-xl">✓</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SOCIAL PROOF SECTION -->
+  <!-- ============================================ -->
+  <!-- PROOF SECTION - Full Width -->
+  <section id="bevis" class="relative py-24 lg:py-32 bg-gradient-to-br from-emerald-600 via-teal-600 to-emerald-700 overflow-hidden">
+    
+    <!-- Decorative elements -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute -top-20 -left-20 w-96 h-96 bg-white rounded-full filter blur-3xl opacity-10"></div>
+      <div class="absolute -bottom-20 -right-20 w-96 h-96 bg-emerald-400 rounded-full filter blur-3xl opacity-20"></div>
+    </div>
+    <div class="relative max-w-full mx-auto px-4 sm:px-8 lg:px-16 xl:px-24">
+      <div class="text-center mb-16 scroll-reveal">
+        <span class="inline-block bg-white/20 text-white px-6 py-2 rounded-full text-sm font-bold mb-4">💬 Anmeldelser</span>
+        
+        <h2 class="text-5xl lg:text-6xl font-black text-white mb-4">Hvad hundeejere siger</h2>
+        
+        <div class="flex items-center justify-center gap-2">
+          <span class="text-3xl">⭐⭐⭐⭐⭐</span>
+          <span class="text-xl text-emerald-100">4.9/5 fra <strong class="text-white">2.847</strong> anmeldelser</span>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
+        <!-- Review 1 -->
+        <div class="bg-white p-8 rounded-3xl shadow-xl scroll-reveal">
+          <div class="flex items-center gap-4 mb-4">
+            <img src="https://i.pravatar.cc/100?img=5" class="w-14 h-14 rounded-full" alt="Mette" loading="lazy">
+            <div>
+              <div class="font-bold">Mette S.</div>
+              <div class="text-gray-500 text-sm">Schæfer-ejer, Aarhus</div>
+              <div class="text-emerald-600 text-xs font-semibold">✓ Verificeret køber</div>
+            </div>
+          </div>
+          
+          <div class="text-yellow-400 text-lg mb-3">⭐⭐⭐⭐⭐</div>
+          
+          <p class="text-gray-700 italic">"Min 12-årige Schæfer havde så ondt i hofterne, at han knap nok kunne gå op ad trapper. Efter 2 uger med Sacred Pet CBD hopper han igen! Det er som at have fået min unge hund tilbage."</p>
+          
+          <div class="mt-4 text-sm text-emerald-600 font-medium">📸 Se før/efter billeder</div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-white p-8 rounded-3xl shadow-xl scroll-reveal">
+          <div class="flex items-center gap-4 mb-4">
+            <img src="https://i.pravatar.cc/100?img=8" class="w-14 h-14 rounded-full" alt="Lars" loading="lazy">
+            <div>
+              <div class="font-bold">Lars K.</div>
+              <div class="text-gray-500 text-sm">Golden Retriever-ejer, København</div>
+              <div class="text-emerald-600 text-xs font-semibold">✓ Verificeret køber</div>
+            </div>
+          </div>
+          
+          <div class="text-yellow-400 text-lg mb-3">⭐⭐⭐⭐⭐</div>
+          
+          <p class="text-gray-700 italic">"Bella var så bange for fyrværkeri at hun ryste i timevis. Med Sacred Pet CBD ligger hun bare og slapper af. Vi har endelig fået vores nytårsaften tilbage!"</p>
+          
+          <div class="mt-4 text-sm text-emerald-600 font-medium">🎥 Se video anmeldelse</div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-white p-8 rounded-3xl shadow-xl scroll-reveal">
+          <div class="flex items-center gap-4 mb-4">
+            <img src="https://i.pravatar.cc/100?img=9" class="w-14 h-14 rounded-full" alt="Pia" loading="lazy">
+            <div>
+              <div class="font-bold">Pia M.</div>
+              <div class="text-gray-500 text-sm">Labrador-ejer, Odense</div>
+              <div class="text-emerald-600 text-xs font-semibold">✓ Verificeret køber · 3x købt</div>
+            </div>
+          </div>
+          
+          <div class="text-yellow-400 text-lg mb-3">⭐⭐⭐⭐⭐</div>
+          
+          <p class="text-gray-700 italic">"Min hund sover så meget bedre nu. Hun vågner ikke flere gange om natten længere. Kan varmt anbefales! Hurtig levering også."</p>
+          
+          <div class="mt-4 text-sm text-emerald-600 font-medium">🔄 Abonnent (sparer 15%)</div>
+        </div>
+      </div>
+
+      <!-- Trust Logos -->
+      <div class="mt-16 text-center scroll-reveal">
+        <p class="text-emerald-100 text-sm mb-6">Omtalt i medierne:</p>
+        
+        <div class="flex flex-wrap justify-center gap-8 opacity-60">
+          <span class="text-xl font-bold text-white">📰 Politiken</span>
+          <span class="text-xl font-bold text-white">📺 TV2</span>
+          <span class="text-xl font-bold text-white">📻 P4</span>
+          <span class="text-xl font-bold text-white">📱 Hunden.dk</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ --
+  <!-- ZERO-PARTY DATA: Interactive Quiz --
+  <!-- ============================================ -->
+  <section class="py-24 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-3xl p-8 lg:p-12 shadow-2xl scroll-reveal">
+        <div class="text-center mb-10">
+          <span class="inline-block bg-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">🎁 Gratis værktøj</span>
+          
+          <h2 class="text-3xl lg:text-4xl font-black text-gray-900 mb-4">Find den rigtige dosis til din hund</h2>
+          
+          <p class="text-gray-600">Svar på 2 spørgsmål, så beregner vi den perfekte dosis — helt gratis</p>
+        </div>
+
+        <form id="dosis-quiz" class="space-y-8">
+          <!-- Question 1 -->
+          <div>
+            <label class="block font-bold text-gray-900 mb-4 text-lg">Hvad vejer din hund?</label>
+            
+            <input type="range" min="1" max="60" value="15" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-emerald-600" id="weight-slider">
+            
+            <div class="flex justify-between items-center mt-4">
+              <span class="text-gray-500">1 kg</span>
+              <span class="text-4xl font-black text-emerald-600"><span id="weight-display">15</span> kg</span>
+              <span class="text-gray-500">60+ kg</span>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div>
+            <label class="block font-bold text-gray-900 mb-4 text-lg">Hvad er den største udfordring?</label>
+            
+            <div class="grid grid-cols-2 gap-3">
+              <label class="flex items-center gap-3 p-4 border-2 border-gray-200 rounded-xl cursor-pointer hover:border-emerald-500 transition has-[:checked]:border-emerald-500 has-[:checked]:bg-emerald-50">
+                <input type="radio" name="challenge" value="angst" class="text-emerald-600 w-5 h-5">
+                <span class="font-medium">😰 Angst/stress</span>
+              </label>
+              
+              <label class="flex items-center gap-3 p-4 border-2 border-gray-200 rounded-xl cursor-pointer hover:border-emerald-500 transition has-[:checked]:border-emerald-500 has-[:checked]:bg-emerald-50">
+                <input type="radio" name="challenge" value="smerter" class="text-emerald-600 w-5 h-5">
+                <span class="font-medium">🦴 Smerter/stivhed</span>
+              </label>
+              
+              <label class="flex items-center gap-3 p-4 border-2 border-gray-200 rounded-xl cursor-pointer hover:border-emerald-500 transition has-[:checked]:border-emerald-500 has-[:checked]:bg-emerald-50">
+                <input type="radio" name="challenge" value="sovn" class="text-emerald-600 w-5 h-5">
+                <span class="font-medium">😴 Dårlig søvn</span>
+              </label>
+              
+              <label class="flex items-center gap-3 p-4 border-2 border-gray-200 rounded-xl cursor-pointer hover:border-emerald-500 transition has-[:checked]:border-emerald-500 has-[:checked]:bg-emerald-50">
+                <input type="radio" name="challenge" value="alt" class="text-emerald-600 w-5 h-5">
+                <span class="font-medium">🔄 Flere ting</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Result -->
+          <div class="bg-gradient-to-r from-emerald-50 to-teal-50 p-8 rounded-2xl border-2 border-emerald-200">
+            <div class="text-center">
+              <div class="text-gray-600 mb-2">Anbefalet daglig dosis:</div>
+              
+              <div class="text-5xl font-black text-emerald-600 mb-2"><span id="dosage-result">6</span> dråber</div>
+              
+              <div class="text-emerald-700">En flaske holder cirka <span id="duration-result">30</span> dage</div>
+            </div>
+          </div>
+
+          <!-- Email capture -->
+          <div class="space-y-3">
+            <input type="email" placeholder="Din email (få din personlige guide tilsendt)" class="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100 outline-none transition text-lg">
+            
+            <button type="submit" class="w-full bg-emerald-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-emerald-700 transition-all shadow-lg btn-hover">
+              📧 Få min gratis dosis-guide
+            </button>
+          </div>
+
+          <p class="text-xs text-gray-500 text-center">Vi spammer ikke. Afmeld når som helst. Din email er sikker hos os.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ --
+  <!-- OFFER SECTION (Conversion Focus) --
+  <!-- ============================================ -->
+  <!-- OFFER SECTION - Full Width -->
+  <section id="tilbud" class="relative py-24 lg:py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
+    
+    <!-- Decorative elements -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500 rounded-full filter blur-3xl opacity-10"></div>
+      <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-500 rounded-full filter blur-3xl opacity-10"></div>
+    </div>
+    
+    <div class="relative max-w-full mx-auto px-4 sm:px-8 lg:px-16 xl:px-24">
+      <div class="text-center mb-12">
+        <div class="inline-block bg-gradient-to-r from-amber-400 to-orange-500 text-amber-900 px-6 py-3 rounded-full font-bold text-lg mb-6 shadow-lg">
+          ⚡ TILBUD: SPAR 10% + GRATIS FRAGT
+        </div>
+
+        <h2 class="text-4xl lg:text-6xl font-black mb-6">
+          Prøv Sacred Pet
+          <span class="text-emerald-400"> risikofrit</span>
+        </h2>
+
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+          Ikke tilfreds? Få alle pengene tilbage inden for 30 dage. Ingen spørgsmål. Ingen besvær.
+        </p>
+      </div>
+
+      <!-- Pricing Cards -->
+      <div class="grid md:grid-cols-2 gap-8 mb-12 max-w-5xl mx-auto">
+        <!-- Single bottle -->
+        <div class="bg-white text-gray-900 rounded-3xl p-8 shadow-2xl">
+          <div class="text-center mb-6">
+            <div class="text-gray-500 line-through text-xl">Normalpris: 443 kr</div>
+            
+            <div class="text-6xl font-black text-emerald-600 mt-2">399 kr</div>
+            
+            <div class="text-gray-600">per flaske · 30 dages forbrug</div>
+          </div>
+
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600">✓</span>
+              <span>1 flaske Sacred Pet CBD (30ml)</span>
+            </li>
+            
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600">✓</span>
+              <span class="text-amber-600 font-semibold">🎁 GRATIS fragt (værdi 49 kr)</span>
+            </li>
+            
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600">✓</span>
+              <span>Personlig doseringsguide</span>
+            </li>
+            
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600">✓</span>
+              <span>30 dages pengene-tilbage-garanti</span>
+            </li>
+          </ul>
+
+          <a href="#" class="block w-full bg-emerald-600 text-white py-4 rounded-xl font-bold text-lg text-center hover:bg-emerald-700 transition-all shadow-lg btn-hover">
+            🛒 Bestil nu — 399 kr
+          </a>
+        </div>
+
+        <!-- Subscription (Popular) -->
+        <div class="bg-gradient-to-br from-emerald-600 to-teal-600 rounded-3xl p-8 shadow-2xl relative">
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-amber-400 text-amber-900 px-6 py-2 rounded-full font-bold">
+            💎 MEST POPULÆR — SPAR 20%
+          </div>
+
+          <div class="text-center mb-6">
+            <div class="text-emerald-200 line-through text-xl">Normalpris: 354 kr/md</div>
+            
+            <div class="text-6xl font-black text-white mt-2">319 kr</div>
+            
+            <div class="text-emerald-100">per måned · Abonnement (kan afmeldes når som helst)</div>
+          </div>
+
+          <ul class="space-y-4 mb-8 text-emerald-50">
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">✓</span>
+              <span>1 flaske hver måned</span>
+            </li>
+            
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">✓</span>
+              <span>🚚 GRATIS fragt (altid)</span>
+            </li>
+            
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">✓</span>
+              <span>📞 Prioriteret kundeservice</span>
+            </li>
+            
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">✓</span>
+              <span>🎁 Gratis gave hver 3. måned</span>
+            </li>
+            
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">✓</span>
+              <span>Ingen binding — afmeld når som helst</span>
+            </li>
+          </ul>
+
+          <a href="#" class="block w-full bg-white text-emerald-600 py-4 rounded-xl font-bold text-lg text-center hover:bg-gray-100 transition-all shadow-lg btn-hover">
+            🛒 Start abonnement — 319 kr/md
+          </a>
+        </div>
+      </div>
+
+      <!-- Trust Elements -->
+      <div class="flex flex-wrap justify-center gap-6 text-gray-400 text-sm">
+        <div class="flex items-center gap-2">🔒 Sikker SSL kryptering</div>
+        <div class="flex items-center gap-2">🛡️ 30 dages pengene-tilbage</div>
+        <div class="flex items-center gap-2">🇩🇰 Dansk kundeservice</div>
+        <div class="flex items-center gap-2">📦 Levering 1-2 hverdage</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION - Full Width -->
+  <section id="faq" class="relative py-24 lg:py-32 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
+    
+    <div class="relative max-w-full mx-auto px-4 sm:px-8 lg:px-16 xl:px-24">
+      <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-12 scroll-reveal">
+        <span class="inline-block bg-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">❓ Spørgsmål?</span>
+        
+        <h2 class="text-4xl font-black text-gray-900 mb-4">Ofte stillede spørgsmål</h2>
+        
+        <p class="text-gray-600">Alt du behøver at vide før du bestiller</p>
+      </div>
+
+      <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <div class="border-2 border-gray-200 rounded-2xl overflow-hidden">
+          <button class="w-full px-6 py-5 text-left flex justify-between items-center font-bold text-lg hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+            <span>Er CBD sikkert for hunde?</span>
+            <span class="text-2xl text-emerald-600 transition-transform">+</span>
+          </button>
+          
+          <div class="hidden px-6 pb-5 text-gray-600 leading-relaxed">
+            Ja! Vores CBD er specielt udviklet til kæledyr og indeholder <strong>0% THC</strong>. Det er testet i tredjeparts laboratorium og bruges af over 2.800 hundeejere i Danmark uden rapporterede bivirkninger. CBD er ikke-giftigt og ikke-psykoaktivt for hunde.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="border-2 border-gray-200 rounded-2xl overflow-hidden">
+          <button class="w-full px-6 py-5 text-left flex justify-between items-center font-bold text-lg hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+            <span>Hvor hurtigt virker det?</span>
+            <span class="text-2xl text-emerald-600 transition-transform">+</span>
+          </button>
+          
+          <div class="hidden px-6 pb-5 text-gray-600 leading-relaxed">
+            De fleste hunde viser forbedring inden for <strong>1-2 uger</strong>. Nogle reagerer hurtigere (få dage), andre har brug for 3-4 uger. Vi anbefaler at give det mindst 30 dage for at se fuld effekt. Resultaterne afhænger af hundens størrelse, alder og tilstand.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="border-2 border-gray-200 rounded-2xl overflow-hidden">
+          <button class="w-full px-6 py-5 text-left flex justify-between items-center font-bold text-lg hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+            <span>Hvad hvis det ikke virker for min hund?</span>
+            <span class="text-2xl text-emerald-600 transition-transform">+</span>
+          </button>
+          
+          <div class="hidden px-6 pb-5 text-gray-600 leading-relaxed">
+            Så får du <strong>alle pengene tilbage</strong> inden for 30 dage. Ingen spørgsmål, ingen besvær. Du beholder endda flasken. Vi tager risikoen, så du kan prøve det uden bekymring. Kontakt os på kontakt@sacredpet.dk for fuld refusion.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="border-2 border-gray-200 rounded-2xl overflow-hidden">
+          <button class="w-full px-6 py-5 text-left flex justify-between items-center font-bold text-lg hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+            <span>Hvordan giver jeg det til min hund?</span>
+            <span class="text-2xl text-emerald-600 transition-transform">+</span>
+          </button>
+          
+          <div class="hidden px-6 pb-5 text-gray-600 leading-relaxed">
+            Nemt! Brug dråbetælleren på flasken. Put dråberne direkte i munden på din hund, eller bland det i maden. De fleste hunde elsker den naturlige kyllingsmag og tager det gerne direkte. Start med den anbefalede dosis på vores beregner.
+          </div>
+        </div>
+      </div>
+
+      <!-- Still have questions CTA -->
+      <div class="mt-8 text-center">
+        <p class="text-gray-600 mb-4">Har du stadig spørgsmål?</p>
+        
+        <a href="mailto:kontakt@sacredpet.dk" class="inline-block bg-gray-100 text-gray-700 px-6 py-3 rounded-xl font-semibold hover:bg-gray-200 transition">
+          📧 Skriv til os — vi svarer inden for 24 timer
+        </a>
+      </div>
+      
+      </div><!-- /max-w-3xl -->
+    </div><!-- /max-w-full -->
+  </section>
+
+  <!-- CONTACT SECTION - Full Width -->
+  <section id="kontakt" class="relative py-24 lg:py-32 bg-gradient-to-br from-emerald-50 via-white to-teal-50 overflow-hidden">
+    
+    <div class="relative max-w-full mx-auto px-4 sm:px-8 lg:px-16 xl:px-24">
+      <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12 scroll-reveal">
+        <h2 class="text-4xl font-black text-gray-900 mb-4">Har du brug for hjælp?</h2>
+        
+        <p class="text-gray-600">Vi er her for at hjælpe dig og din hund</p>
+      </div>
+
+      <!-- GRATIS: Formspree Form -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="bg-white rounded-3xl p-8 lg:p-12 shadow-2xl scroll-reveal">
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div>
+            <label class="block font-semibold text-gray-700 mb-2">Dit navn *</label>
+            <input type="text" name="name" required class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100 outline-none transition">
+          </div>
+          
+          <div>
+            <label class="block font-semibold text-gray-700 mb-2">Email *</label>
+            <input type="email" name="email" required class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100 outline-none transition">
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <label class="block font-semibold text-gray-700 mb-2">Din hunds race og vægt</label>
+          <input type="text" name="dog_info" placeholder="F.eks. Schæfer, 25 kg" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100 outline-none transition">
+        </div>
+
+        <div class="mb-6">
+          <label class="block font-semibold text-gray-700 mb-2">Besked *</label>
+          <textarea name="message" rows="4" required class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100 outline-none transition resize-none"></textarea>
+        </div>
+
+        <input type="hidden" name="_subject" value="Ny henvendelse fra Sacred Pet website">
+        <input type="hidden" name="_next" value="https://sacredpet.dk/tak.html">
+
+        <button type="submit" class="w-full bg-emerald-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-emerald-700 transition-all shadow-lg btn-hover">
+          📧 Send besked
+        </button>
+      </form>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-6 text-center">
+        <div class="bg-white p-6 rounded-2xl shadow-lg">
+          <div class="text-3xl mb-2">📧</div>
+          <div class="font-semibold">kontakt@sacredpet.dk</div>
+          <div class="text-sm text-gray-500">Svar inden for 24 timer</div>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-lg">
+          <div class="text-3xl mb-2">📞</div>
+          <div class="font-semibold">+45 12 34 56 78</div>
+          <div class="text-sm text-gray-500">Man-fre 9-17</div>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-lg">
+          <div class="text-3xl mb-2">💬</div>
+          <div class="font-semibold">Live chat</div>
+          <div class="text-sm text-gray-500">Online nu — klik nede i hjørnet</div>
+        </div>
+      </div>
+      
+      </div><!-- /max-w-4xl -->
+    </div><!-- /max-w-full -->
+  </section>
+
+  <!-- STICKY MOBILE CTA -->
+  <div class="sticky-cta md:hidden">
+    <a href="#tilbud" class="block w-full bg-emerald-600 text-white py-4 rounded-xl font-bold text-center shadow-lg">
+      🛒 Bestil nu — 399 kr (-10%)
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-400 py-16">
+    <div class="max-w-full mx-auto px-4 sm:px-8 lg:px-16 xl:px-24">
+      <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-xl flex items-center justify-center text-white text-2xl">🌿</div>
+            <div>
+              <span class="text-xl font-bold text-white">Sacred Pet</span>
+              <span class="block text-xs text-gray-500">CBD til hunde</span>
+            </div>
+          </div>
+          
+          <p class="text-sm mb-4">Naturlig CBD til din bedste ven. Dansk kvalitet siden 2025.</p>
+          
+          <div class="flex gap-4">
+            <a href="#" class="text-2xl hover:text-white transition">📘</a>
+            <a href="#" class="text-2xl hover:text-white transition">📸</a>
+            <a href="#" class="text-2xl hover:text-white transition">💬</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-white font-semibold mb-4">Produkt</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-white transition">CBD Olie</a></li>
+            <li><a href="#" class="hover:text-white transition">Dosering</a></li>
+            <li><a href="#" class="hover:text-white transition">Ingredienser</a></li>
+            <li><a href="#" class="hover:text-white transition">Laboratorietests</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-semibold mb-4">Hjælp</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#faq" class="hover:text-white transition">FAQ</a></li>
+            <li><a href="#kontakt" class="hover:text-white transition">Kontakt</a></li>
+            <li><a href="#" class="hover:text-white transition">Levering</a></li>
+            <li><a href="#" class="hover:text-white transition">Returnering</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-semibold mb-4">Kontakt</h4>
+          <ul class="space-y-2 text-sm">
+            <li>📧 kontakt@sacredpet.dk</li>
+            <li>📞 +45 12 34 56 78</li>
+            <li>🏢 Aarhus, Danmark</li>
+            <li>🕐 Man-fre: 9-17</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 pt-8 text-center text-sm">
+        <p>© 2025 Sacred Shop. Alle rettigheder forbeholdes.</p>
+        <div class="mt-4 space-x-4">
+          <a href="#" class="hover:text-white transition">Privatlivspolitik</a>
+          <a href="#" class="hover:text-white transition">Handelsbetingelser</a>
+          <a href="#" class="hover:text-white transition">Cookiepolitik</a>
+        </div>
+      </div>
+      
+      </div><!-- /max-w-7xl -->
+    </div><!-- /max-w-full -->
+  </footer>
+
+  <!-- JAVASCRIPT --
+  <script>
+    // Progress bar
+    window.addEventListener('scroll', () => {
+      const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+
+    // Live counter simulation
+    setInterval(() => {
+      const counter = document.getElementById('live-counter');
+      const current = parseInt(counter.textContent);
+      const change = Math.random() > 0.5 ? 1 : -1;
+      const newValue = Math.max(35, Math.min(65, current + change));
+      counter.textContent = newValue;
+    }, 5000);
+
+    // Sold today counter
+    setInterval(() => {
+      const sold = document.getElementById('sold-today');
+      if (Math.random() > 0.7) {
+        sold.textContent = parseInt(sold.textContent) + 1;
+      }
+    }, 30000);
+
+    // Countdown timer
+    function updateCountdown() {
+      const now = new Date();
+      const endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59);
+      const diff = endOfDay - now;
+      
+      const hours = Math.floor(diff / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      
+      document.getElementById('countdown').textContent = 
+        `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // Dosis calculator
+    const weightSlider = document.getElementById('weight-slider');
+    const weightDisplay = document.getElementById('weight-display');
+    const dosageResult = document.getElementById('dosage-result');
+    const durationResult = document.getElementById('duration-result');
+
+    weightSlider.addEventListener('input', () => {
+      const weight = parseInt(weightSlider.value);
+      const drops = Math.round(weight * 0.4);
+      const days = Math.round(600 / drops);
+      
+      weightDisplay.textContent = weight;
+      dosageResult.textContent = drops;
+      durationResult.textContent = days;
+    });
+
+    // FAQ toggle
+    function toggleFaq(button) {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('span:last-child');
+      
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        icon.textContent = '−';
+        icon.classList.add('rotate-45');
+      } else {
+        content.classList.add('hidden');
+        icon.textContent = '+';
+        icon.classList.remove('rotate-45');
+      }
+    }
+
+    // Scroll reveal animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 100) {
+        navbar.classList.add('py-2');
+        navbar.classList.remove('py-4');
+      } else {
+        navbar.classList.add('py-4');
+        navbar.classList.remove('py-2');
+      }
+    });
+
+    // Initialize Lucide icons
+    lucide.createIcons();
+  </script>
+
+</body>
+</html>

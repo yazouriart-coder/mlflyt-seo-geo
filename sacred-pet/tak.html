@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tak for din henvendelse! | Sacred Pet</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>* { font-family: 'Inter', sans-serif; }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+    @keyframes confetti { 0% { transform: translateY(-100%) rotate(0deg); opacity: 1; } 100% { transform: translateY(100vh) rotate(720deg); opacity: 0; } }
+    .animate-float { animation: float 3s ease-in-out infinite; }
+    .animate-pulse-slow { animation: pulse 2s ease-in-out infinite; }
+    .confetti { position: fixed; width: 10px; height: 10px; animation: confetti 4s linear forwards; }
+    .gradient-text { background: linear-gradient(135deg, #10b981 0%, #f59e0b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  </style>
+  <!-- GRATIS: Plausible analytics -->
+  <script defer data-domain="sacredpet.dk" src="https://plausible.io/js/script.js"></script>
+</head>
+<body class="bg-gradient-to-br from-emerald-50 via-white to-teal-100 min-h-screen flex items-center justify-center p-4">
+
+  <!-- Confetti Animation -->
+  <script>
+    for (let i = 0; i < 50; i++) {
+      const confetti = document.createElement('div');
+      confetti.className = 'confetti';
+      confetti.style.left = Math.random() * 100 + 'vw';
+      confetti.style.backgroundColor = ['#10b981', '#f59e0b', '#8b5cf6', '#ec4899'][Math.floor(Math.random() * 4)];
+      confetti.style.animationDelay = Math.random() * 2 + 's';
+      document.body.appendChild(confetti);
+    }
+  </script>
+
+  <div class="max-w-2xl w-full text-center">
+    <!-- Success Icon -->
+    <div class="mb-8">
+      <div class="w-32 h-32 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-full flex items-center justify-center text-white text-6xl mx-auto animate-float shadow-2xl shadow-emerald-600/30">
+        🎉
+      </div>
+    </div>
+
+    <h1 class="text-4xl md:text-6xl font-black text-gray-900 mb-6">
+      Tak for din <span class="gradient-text">henvendelse!</span>
+    </h1>
+
+    <p class="text-xl text-gray-600 mb-8">
+      Vi har modtaget din besked og vender tilbage inden for <strong class="text-emerald-600">24 timer</strong>.
+    </p>
+
+    <!-- What happens next -->
+    <div class="bg-white rounded-3xl p-8 shadow-xl mb-8">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Hvad sker der nu?</h2>
+
+      <div class="space-y-6 text-left">
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 font-bold flex-shrink-0">1</div>
+          <div>
+            <h3 class="font-semibold text-gray-900">Vi gennemgår din besked</h3>
+            <p class="text-gray-600">En af vores CBD-eksperter kigger på din henvendelse.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 font-bold flex-shrink-0">2</div>
+          <div>
+            <h3 class="font-semibold text-gray-900">Personlig rådgivning</h3>
+            <p class="text-gray-600">Vi sender dig en skræddersyet anbefaling baseret på din hunds behov.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 font-bold flex-shrink-0">3</div>
+          <div>
+            <h3 class="font-semibold text-gray-900">Gratis prøve (valgfrit)</h3>
+            <p class="text-gray-600">Få 10% rabat på din første ordre + gratis levering.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Buttons -->
+    <div class="space-y-4">
+      <a href="/" class="inline-block bg-emerald-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-emerald-700 transition-all shadow-lg shadow-emerald-600/30">← Tilbage til forsiden</a>
+
+      <div class="mt-6">
+        <p class="text-gray-500 mb-4">Følg os for hundetips og nyheder:</p>
+        
+        <div class="flex justify-center gap-4">
+          <a href="#" class="text-3xl hover:scale-110 transition-transform">📘</a>
+          <a href="#" class="text-3xl hover:scale-110 transition-transform">📸</a>
+          <a href="#" class="text-3xl hover:scale-110 transition-transform">💬</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trust -->
+    <div class="mt-12 pt-8 border-t border-gray-200">
+      <p class="text-gray-500 text-sm">
+        📧 Har du brug for hurtig hjælp? Skriv til <a href="mailto:kontakt@sacredpet.dk" class="text-emerald-600 hover:underline">kontakt@sacredpet.dk</a>
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
